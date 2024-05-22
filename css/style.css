@@ -1,0 +1,151 @@
+
+/*  SETTING GLOBALE DELLA PAGINA  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*  /SETTING GLOBALE DELLA PAGINA  */
+
+/*  STYLING HEADER  */
+.logo-container {
+    padding: 10px 0 10px 20px;
+    background-color: white;
+}
+
+.logo, .logo-text {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.logo-text {
+    font-size: 45px;   
+}
+/*  /STYLING HEADER  */
+
+/*  STYLING CORPO PRINCIPALE  */
+body {
+    background-color: rgb(243, 243, 243);
+    font-family: "Yantramanav", sans-serif;
+}
+
+/*  STYLING SEZIONE BOTTONI  */
+.buttons-section, .list-container {
+    width: 1200px;
+    background-color: white;
+}
+
+.buttons-section {
+    margin: auto;
+    margin-top: 40px;
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: progress;
+}
+
+.task {
+    margin-left: 30px;
+    background-color: rgb(15, 175, 238);
+    border: none;
+    color: white;
+}
+
+.section {
+    background-color: white;
+    border-color: rgb(177, 177, 177);
+    border-style: solid;
+    color: rgb(177, 177, 177);
+}
+/*  /STYLING SEZIONE BOTTONI  */
+
+/*  STYLING LISTA  */
+.list-container {
+    margin: 5px auto;
+    padding-bottom: 20px;
+}
+
+ul {
+    padding-left: 70px;
+    list-style-type: none;
+}
+
+li {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+span {
+    color: white;
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    font-size: 12px;
+    height: 25px;
+    border-radius: 20px;
+    line-height: 25px;
+}
+
+.list-point-name {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.task-container {
+    padding-top: 20px;
+}
+
+.topic {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.topic::marker {
+    content: '♨';
+    color: black;
+}
+
+li::marker {
+    content: '☑';
+    color: green;
+}
+
+.cross::marker {
+    content: '☒';  
+    color: red;
+}
+
+.editorial {
+    background-color: rgb(15, 175, 238);   
+}
+
+.goals {
+   background-color: blueviolet; 
+}
+
+.recruiting {
+    background-color: rgb(0, 194, 0);
+    width: 75px;
+}
+
+.mobile {
+    background-color: orange;
+    width: 55px;
+}
+
+.web {
+    background-color: rgb(241, 77, 77);
+}
+
+.sales {
+    background-color: rgb(145, 218, 28);
+    width: 50px;
+}
+/*  /STYLING LISTA  */
+/*  /STYLING CORPO PRINCIPALE  */
