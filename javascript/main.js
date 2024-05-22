@@ -43,6 +43,10 @@ createApp({
           done: true,
         },
       ],
+
+      index: 0,
     };
   },
+
+  method: {},
 }).mount("#app");

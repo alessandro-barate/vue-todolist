@@ -37,12 +37,13 @@
           <div class="task-container">
             <ul class="list-point-name">
               <li class="topic">New Task</li>
-              <li>
-                Quarterly Newsletter <span class="editorial">Editorial</span>
+              <li v-for="todo in lists">
+                {{todo.text}}
+                <p :class="{'crossed-out-text': lists.done === false }">ciao</p>
               </li>
             </ul>
           </div>
-          <div class="task-container">
+          <!-- <div class="task-container">
             <ul class="list-point-name">
               <li class="topic">Today</li>
               <li>
@@ -57,8 +58,8 @@
                 <span class="mobile">Mobile</span>
               </li>
             </ul>
-          </div>
-          <div class="task-container">
+          </div> -->
+          <!-- <div class="task-container">
             <ul class="list-point-name">
               <li class="topic">Upcoming</li>
               <li class="cross">Schedule meeting with Alex</li>
@@ -71,7 +72,7 @@
                 <span class="editorial">Editorial</span>
               </li>
             </ul>
-          </div>
+          </div> -->
           <!-- /SEZIONE CON LISTA -->
         </div>
       </div>
