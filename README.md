@@ -19,3 +19,7 @@ Bonus:
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 Buon lavoro e buon divertimento!
 :saluto_vulcaniano:
+
+1 - Creo la struttura dati (array con dentro oggetti con dentro 2 proprietà --> text e done)
+2 - Ciclo dentro all'array e stampo nella ul tanti li quant'è la lunghezza dell'array
+3 - Se done true --> testo sbarrato (--> aggiungere classe css)
