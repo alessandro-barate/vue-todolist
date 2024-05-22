@@ -112,15 +112,15 @@ span {
   color: black;
 }
 
-li::marker {
+/* li::marker {
   content: "☑";
   color: green;
-}
+} */
 
-.cross::marker {
+/* .cross::marker {
   content: "☒";
   color: red;
-}
+} */
 
 .editorial {
   background-color: rgb(15, 175, 238);

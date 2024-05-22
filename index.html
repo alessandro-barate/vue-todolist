@@ -37,9 +37,14 @@
           <div class="task-container">
             <ul class="list-point-name">
               <li class="topic">New Task</li>
-              <li v-for="todo in lists">
+              <li
+                v-for="todo in lists"
+                :class="{'crossed-out-text': lists[index].done === true }"
+              >
                 {{todo.text}}
-                <p :class="{'crossed-out-text': lists.done === false }">ciao</p>
+                <!-- <p :class="{'crossed-out-text': lists[index].done === true }">
+                  ciao
+                </p> -->
               </li>
             </ul>
           </div>
