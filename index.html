@@ -24,16 +24,17 @@
 
     <!-- CORPO PRINCIPALE DELLA PAGINA -->
     <main>
-      <div id="app">
+      <div id="app" v-cloak>
         <!-- SEZIONE CON BOTTONI -->
         <div class="buttons-section">
           <input
+            v-model="text"
             type="text"
             id="add-task"
             placeholder="Write down here your task to add"
           />
           <label for="add-task">
-            <button id="add-task" class="task">Add Task</button>
+            <button @click="" id="add-task" class="task">Add Task</button>
           </label>
           <button class="section">Add Section</button>
         </div>
@@ -44,12 +45,19 @@
           <div class="task-container">
             <ul class="list-point-name">
               <li class="topic">New Task</li>
-              <li
-                v-for="(todo, index) in lists"
-                :class="{'crossed-out-text': lists[index].done === true }"
-              >
-                <button @click="removeTask" class="remove-task">X</button>
-                {{todo.text}}
+              <li v-for="(todo, index) in lists">
+                <button @click="condition = false" class="remove-task">
+                  X
+                </button>
+                <span v-if="lists.done" :class="{'crossed-out-text': !show }"
+                  >{{todo.text}}</span
+                >
+                <span
+                  v-else
+                  @click="lists.done = !lists.done"
+                  :class="{'crossed-out-text': show }"
+                  >{{todo.text}}</span
+                >
               </li>
             </ul>
           </div>

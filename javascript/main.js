@@ -46,6 +46,8 @@ createApp({
 
       index: 0,
       show: true,
+      text: "",
+      condition: true,
     };
   },
 
@@ -53,5 +55,13 @@ createApp({
     removeTask() {
       console.log("ciao");
     },
+
+    addTask() {
+      this.text += this.lists;
+    },
   },
 }).mount("#app");
+
+//lists[index].done === true
+
+//@click="show = false"
