@@ -45,8 +45,13 @@ createApp({
       ],
 
       index: 0,
+      show: true,
     };
   },
 
-  method: {},
+  method: {
+    removeTask() {
+      console.log("ciao");
+    },
+  },
 }).mount("#app");

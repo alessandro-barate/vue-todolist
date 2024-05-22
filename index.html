@@ -27,7 +27,14 @@
       <div id="app">
         <!-- SEZIONE CON BOTTONI -->
         <div class="buttons-section">
-          <button class="task">Add Task</button>
+          <input
+            type="text"
+            id="add-task"
+            placeholder="Write down here your task to add"
+          />
+          <label for="add-task">
+            <button id="add-task" class="task">Add Task</button>
+          </label>
           <button class="section">Add Section</button>
         </div>
         <!-- /SEZIONE CON BOTTONI -->
@@ -41,6 +48,7 @@
                 v-for="(todo, index) in lists"
                 :class="{'crossed-out-text': lists[index].done === true }"
               >
+                <button @click="removeTask" class="remove-task">X</button>
                 {{todo.text}}
               </li>
             </ul>
