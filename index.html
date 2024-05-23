@@ -28,14 +28,14 @@
         <!-- SEZIONE CON BOTTONI -->
         <div class="buttons-section">
           <input
-            v-model="text"
+            v-model="newTask"
+            @keyup.enter="addTask"
             type="text"
             id="add-task"
             placeholder="Write down here your task to add"
           />
-          <label for="add-task">
-            <button @click="" id="add-task" class="task">Add Task</button>
-          </label>
+          <label for="add-task"> </label>
+          <button @click="addTask" class="task">Add Task</button>
           <button class="section">Add Section</button>
         </div>
         <!-- /SEZIONE CON BOTTONI -->
@@ -45,52 +45,19 @@
           <div class="task-container">
             <ul class="list-point-name">
               <li class="topic">New Task</li>
-              <li v-for="(todo, index) in lists">
-                <button @click="condition = false" class="remove-task">
+              <li v-for="(todo, index) in lists" :key="`todo-${index}`">
+                <span
+                  @click="toggleTask()"
+                  :class="{'crossed-out-text': todo.done}"
+                  >{{todo.text}}</span
+                >
+                <button @click="removeTask(index)" class="remove-task">
                   X
                 </button>
-                <span v-if="lists.done" :class="{'crossed-out-text': !show }"
-                  >{{todo.text}}</span
-                >
-                <span
-                  v-else
-                  @click="lists.done = !lists.done"
-                  :class="{'crossed-out-text': show }"
-                  >{{todo.text}}</span
-                >
               </li>
             </ul>
           </div>
-          <!-- <div class="task-container">
-            <ul class="list-point-name">
-              <li class="topic">Today</li>
-              <li>
-                Recruiting blog post <span class="editorial">Editorial</span>
-              </li>
-              <li>Mobile app launch <span class="goals">Q1 Goals</span></li>
-              <li class="cross">
-                Interview John H. <span class="recruiting">Recruiting</span>
-              </li>
-              <li>
-                Summit update to mobile storefronts
-                <span class="mobile">Mobile</span>
-              </li>
-            </ul>
-          </div> -->
-          <!-- <div class="task-container">
-            <ul class="list-point-name">
-              <li class="topic">Upcoming</li>
-              <li class="cross">Schedule meeting with Alex</li>
-              <li>Homepage refresh <span class="web">Website</span></li>
-              <li>
-                Onboard new Sales team members <span class="sales">Sales</span>
-              </li>
-              <li>
-                Review editorial calendar
-                <span class="editorial">Editorial</span>
-              </li>
-            </ul>
-          </div> -->
+
           <!-- /SEZIONE CON LISTA -->
         </div>
       </div>

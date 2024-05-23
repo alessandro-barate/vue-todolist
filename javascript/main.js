@@ -45,23 +45,27 @@ createApp({
       ],
 
       index: 0,
-      show: true,
-      text: "",
-      condition: true,
+      newTask: null,
     };
   },
 
-  method: {
-    removeTask() {
-      console.log("ciao");
+  methods: {
+    removeTask(indexReceived) {
+      this.lists = this.lists.filter((todo, index) => index !== indexReceived); //Qui non vado a togliere effettivamente dall'array di partenza, perchè fare una cosa del genere è onerosa. E' best practice fare un nuovo array usando filter.
     },
 
     addTask() {
-      this.text += this.lists;
+      const myTask = { text: this.newTask.trim(), done: false };
+
+      if (!this.newTask) return;
+      this.lists.push(myTask);
+      this.newTask = null;
+    },
+
+    toggleTask(indexReceived) {
+      this.lists[indexReceived].done = !this.lists[indexReceived].done;
     },
   },
 }).mount("#app");
-
-//lists[index].done === true
 
 //@click="show = false"
