@@ -66,8 +66,6 @@ createApp({
     toggleTask(indexReceived) {
       this.lists[indexReceived].done = !this.lists[indexReceived].done;
     },
-
-    tasksList() {},
   },
 }).mount("#app");
 
