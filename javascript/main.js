@@ -46,6 +46,7 @@ createApp({
 
       index: 0,
       newTask: null,
+      searchTask: null,
     };
   },
 
@@ -65,6 +66,8 @@ createApp({
     toggleTask(indexReceived) {
       this.lists[indexReceived].done = !this.lists[indexReceived].done;
     },
+
+    tasksList() {},
   },
 }).mount("#app");
 

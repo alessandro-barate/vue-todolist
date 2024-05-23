@@ -35,8 +35,15 @@
             placeholder="Write down here your task to add"
           />
           <label for="add-task"> </label>
+
           <button @click="addTask" class="task">Add Task</button>
           <button class="section">Add Section</button>
+
+          <input
+            v-model="searchTask"
+            type="text"
+            placeholder="Search your task here"
+          />
         </div>
         <!-- /SEZIONE CON BOTTONI -->
 
