@@ -47,7 +47,7 @@
               <li class="topic">New Task</li>
               <li v-for="(todo, index) in lists" :key="`todo-${index}`">
                 <span
-                  @click="toggleTask()"
+                  @click="toggleTask(index)"
                   :class="{'crossed-out-text': todo.done}"
                   >{{todo.text}}</span
                 >
